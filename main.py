@@ -32,3 +32,9 @@ alphabet_dict = {row.letter: row.code for (index, row) in alphabet_df.iterrows()
 # print(alphabet_dict)
 
 # TODO 2. Create a list of the phonetic code words from a word that the user inputs.
+
+user_word = input("Give me a word:\n").upper()
+
+word_list = [alphabet_dict[letter] for letter in user_word]
+
+print(word_list)
