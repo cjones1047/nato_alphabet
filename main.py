@@ -35,6 +35,9 @@ alphabet_dict = {row.letter: row.code for (index, row) in alphabet_df.iterrows()
 
 user_word = input("Give me a word:\n").upper()
 
-word_list = [alphabet_dict[letter] for letter in user_word]
-
-print(word_list)
+try:
+    word_list = [alphabet_dict[letter] for letter in user_word]
+except KeyError:
+    print("Sorry, please enter a valid word.")
+else:
+    print(word_list)
